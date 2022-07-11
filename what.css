@@ -1,0 +1,60 @@
+.contact{
+    position: relative;
+    display: flex;
+    align-items:center ;
+    width: 300px;
+    height: 300px;
+
+}
+.icon{
+    position: absolute;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    color:var(--color);
+
+}
+.center{
+    width: 90px;
+    height: 90px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    border: 2px solid #f1f1f1;
+    text-shadow: none;
+    box-shadow: inset -2px -2px 5px #b8b9be, inset 3px 3px 7px
+     #fff, inset 1px 1px #2225, 1px 2px 1px #0003;
+    transition: box-shadow 0.3s;
+    z-index: 9;
+
+}
+.social{
+    transform: translateX(120px);
+    transform-origin: 150px;
+    transition: transform 0.4s;
+    transition-delay: calc(0.1s * var(--i));
+} 
+.social i{
+    transform:rotate(calc(360deg /-8 *var(--i)));
+    width:60px;
+    height: 60px;
+    display: grid;
+    place-content: center;
+    border-radius: inherit;
+    border: 2px solid #f1f1f1;
+    text-shadow: none;
+    box-shadow: inset -2px -2px 5px #b8b9be, inset 3px 3px
+    7px #fff, inset 1px 1px  #2225, 1px 2px 1px #0003;
+    transition: box-shadow 0.22s;
+
+}
+.social i:hover{
+    color: #999;
+    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff;
+    text-shadow: 1px 1px 1px #222, -1px -1px 1px #fff;
+}
+.center:focus~ .social{
+    transform:rotate(calc(360deg /8 * var(--i)));
+}
